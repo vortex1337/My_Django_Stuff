@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="djangtwo">
+      {% if my_users %}
+      <table>
+        <thead>
+          <th>First Name </th>
+          <th>Last Name </th>
+          <th>Email </th>
+        </thead>
+        {% for usrs in my_users %}
+        <tr>
+          <td>{{ usrs.first_name }}</td>
+          <td>{{ usrs.last_name }}</td>
+          <td>{{ usrs.email }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p>NO USERS FOUND!</p>
+      {% endif %}
+    </div>
+
+  </body>
+</html>
